@@ -2,6 +2,8 @@ const gamestart = document.querySelector('startbutton')
 const gameend = document.querySelector('endbutton')
 const circles = document.querySelectorAll('.circle')
 const scoreDisplay = document.querySelector('.score')
+const overlay = document.querySelector('.overlay');
+const closeButton = document.querySelector('.close');
 
 
 
@@ -42,9 +44,10 @@ const enableEvents = () => {
 const startGame = () => {
 
     if (rounds >= 3) {
-        return EndGame
+        return EndGame()
     }
 
+    enableEvents()
 
     const newActive = pickNumber(active) 
 
@@ -72,14 +75,22 @@ const startGame = () => {
 
 }
 
-const EndGame = () => {
-    clearTimeout(timer)
-    resetgame();
+
+const thankscreen = () => {
+    overlay.classList.toggle('visible')
 }
 
-const resetgame = () => {
-    window.location.reload()
+const EndGame = () => {
+    thankscreen()
+    clearTimeout(timer)
+
 }
+
+const Xbutton = () => (
+window.location.reload()
+)
+
 
 startbutton.addEventListener('click', startGame)
 endbutton.addEventListener('click', EndGame)
+closeButton.addEventListener('click', Xbutton)
