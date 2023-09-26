@@ -35,10 +35,12 @@
   }
 
 body {
-    background-color: black;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: rgb(2, 156, 156);
     text-align: center;
+    background-image: url(cb109999e76292b5288868a61c043b90.gif);
+    background-size: cover;
+
 }
 
 h1 {
@@ -66,7 +68,6 @@ h1 {
 
 .circle.active {
     background-color: darkblue;
+    background-size: cover;
 
-    /*background-image: none
-   /* background-size: none ; */
 }

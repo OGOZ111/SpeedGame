@@ -12,7 +12,7 @@ let score = 0;
 let timer; 
 let pace = 1000;
 let active = 0;
-let rounds = 0
+let rounds = 0;
 
 
 const randNum = (min,max) => Math.floor(Math.random() * (max - min + 1)) + min;
