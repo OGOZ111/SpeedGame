@@ -6,6 +6,7 @@ const scoreDisplay = document.querySelector('.score')
 
 
 let score = 0;
+let timer; 
 
 
 
@@ -26,11 +27,25 @@ circles.forEach((circle, i) => {
 
 
 const startGame = () => {
-    console.log("game started")
+    const newActive = pickNumber()
+
+    timer = setTimeout(startGame, 1000)
+
+    function pickNumber() {
+         const newActive = randNum(0,3)
+        return console.log(newActive)
+
+
+    }
+
+
+
 }
 
 const EndGame = () => {
     console.log("game over")
+
+    clearTimeout(timer)
 }
 
 
