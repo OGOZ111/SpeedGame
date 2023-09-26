@@ -31,11 +31,12 @@ h1 {
     align-items: center;
     justify-content: center;
     margin: 1rem;
+    pointer-events: none;
 }
 
 .circle.active {
     background-color: darkblue;
-    
+
     /*background-image: none
    /* background-size: none ; */
 }
