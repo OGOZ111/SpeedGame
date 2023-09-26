@@ -32,3 +32,10 @@ h1 {
     justify-content: center;
     margin: 1rem;
 }
+
+.circle.active {
+    background-color: darkblue;
+    
+    /*background-image: none
+   /* background-size: none ; */
+}

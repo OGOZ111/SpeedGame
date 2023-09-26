@@ -4,9 +4,11 @@ const circles = document.querySelectorAll('.circle')
 const scoreDisplay = document.querySelector('.score')
 
 
-
+// declare global varials
 let score = 0;
 let timer; 
+let pace = 1000;
+let active = 0;
 
 
 
@@ -27,23 +29,32 @@ circles.forEach((circle, i) => {
 
 
 const startGame = () => {
-    const newActive = pickNumber()
+    const newActive = pickNumber(active) 
 
-    timer = setTimeout(startGame, 1000)
+    circles[newActive].classList.toggle('active')
+    circles[active].classList.remove('active')
 
-    function pickNumber() {
+
+    active = newActive
+    timer = setTimeout(startGame, pace)
+    pace -= 10
+
+
+
+    function pickNumber(active) {
          const newActive = randNum(0,3)
-        return console.log(newActive)
+         if (newActive !== active) {
+            return newActive
+         }
 
 
+        return pickNumber(active)
     }
-
-
 
 }
 
 const EndGame = () => {
-    console.log("game over")
+
 
     clearTimeout(timer)
 }
