@@ -2,12 +2,12 @@ const gamestart = document.querySelector('startbutton')
 const gameend = document.querySelector('endbutton')
 const circles = document.querySelectorAll('.circle')
 
-const clickCircle = () => {
-    console.log('Circle was clicked')
+const clickCircle = (i) => {
+    console.log('Circle was clicked', i)
 }
 
-circles.forEach((circle) => {
-    circle.addEventListener('click', clickCircle)
+circles.forEach((circle, i) => {
+    circle.addEventListener('click', () => clickCircle(i))
 })
 
 
