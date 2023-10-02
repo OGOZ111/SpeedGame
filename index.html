@@ -4,28 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Speed Game</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Press+Start+2P&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    />
+    <p class="scores">SCORE: <span class="score">0</span></p>
+
+    <title>Speed game</title>
   </head>
   <body>
-    <h1>speedgame</h1>
+    <h1></h1>
+    <img class="title" src="c2a26aece68875f7006ba1e798cedb97.png" />
     <div class="overlay">
       <div class="modal">
         <h2>Thanks for playing!!</h2>
-        <p>Your High Score was:</p>
+        <p class="message">Your High Score was:</p>
         <button class="close">
           <span>X</span>
         </button>
       </div>
     </div>
-    <p>score <span class="score">0</span></p>
     <div class="circles">
-      <div class="circle">0</div>
-      <div class="circle">1</div>
-      <div class="circle">2</div>
-      <div class="circle">3</div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
     </div>
-    <button id="startbutton">Start game</button>
-    <button id="endbutton">End game</button>
+    <div class="buttons">
+      <button id="startbutton">Start game</button>
+      <button id="endbutton">End game</button>
+    </div>
+    <audio class="music" controls="controls">
+      <source
+        src="2019-12-11_-_Retro_Platforming_-_David_Fesliyan.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
   </body>
   <script src="main.js"></script>
 </html>

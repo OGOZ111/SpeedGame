@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'VT323', monospace;
 }
 
 .overlay {
@@ -52,6 +53,8 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .circle {
@@ -67,7 +70,78 @@ h1 {
 }
 
 .circle.active {
-    background-color: darkblue;
+    background-color: rgb(228, 0, 0);
     background-size: cover;
 
 }
+
+.title {
+  margin-top: 200px;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+#endbutton {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  padding: 10px;
+  margin-top: 100px;
+  font-size: 30px;
+  border-radius: 2%;
+}
+
+#endbutton.visible {
+  display: flex;
+}
+
+#startbutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  padding: 10px;
+  font-size: 30px;
+  border-radius: 2%;
+  margin-top: 100px;
+  
+
+}
+
+#startbutton.visible {
+  display: none;
+}
+
+.score {
+  display: flex;
+  justify-content: left;
+  margin-left: 40px;
+  font-size: 60px;
+  color: red;
+
+}
+
+.scores {
+  display: flex;
+  justify-content: left;
+  margin-left: 40px;
+  font-size: 60px;
+  background-color: white;
+  width: 250px;
+  color: black;
+
+
+}
+
+.music {
+  display: flex;
+
+}
+

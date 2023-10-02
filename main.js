@@ -4,7 +4,7 @@ const circles = document.querySelectorAll('.circle')
 const scoreDisplay = document.querySelector('.score')
 const overlay = document.querySelector('.overlay');
 const closeButton = document.querySelector('.close');
-
+const message = document.querySelector('.message')
 
 
 // declare global varials
@@ -43,6 +43,7 @@ const enableEvents = () => {
 
 const startGame = () => {
 
+
     if (rounds >= 3) {
         return EndGame()
     }
@@ -62,7 +63,6 @@ const startGame = () => {
     rounds++
 
 
-
     function pickNumber(active) {
          const newActive = randNum(0,3)
          if (newActive !== active) {
@@ -72,12 +72,21 @@ const startGame = () => {
 
         return pickNumber(active)
     }
-
 }
 
 
 const thankscreen = () => {
     overlay.classList.toggle('visible')
+
+    if (score <= 20) {message.textContent = ('Your score was ' + score + '!!  You have failed. Come back when you have improved')}
+    if (score > 20) {message.textContent = ('Your score was ' + score + '!!  Some more practice is needed')}
+    if (score > 50) {message.textContent = ('Your score was ' + score + '!!  IMPRESSIVE!. You are worthy ')}
+
+}
+
+function buttonswitch() {
+    startbutton.classList.toggle('visible')
+    endbutton.classList.toggle('visible')
 }
 
 const EndGame = () => {
@@ -92,5 +101,6 @@ window.location.reload()
 
 
 startbutton.addEventListener('click', startGame)
+startbutton.addEventListener('click', buttonswitch)
 endbutton.addEventListener('click', EndGame)
 closeButton.addEventListener('click', Xbutton)
