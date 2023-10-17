@@ -7,6 +7,24 @@ const closeButton = document.querySelector('.close');
 const message = document.querySelector('.message')
 
 
+
+function soundplay() {
+let soundmenu = new Audio('blipSelect.wav');
+soundmenu.play();
+}
+
+function soundover() {
+    let soundend = new Audio('mixkit-arcade-retro-game-over-213.wav')
+    soundend.play()
+}
+
+function soundhit() {
+    let soundboom = new Audio('explosion.wav')
+    soundboom.play()
+
+}
+
+
 // declare global varials
 let score = 0;
 let timer; 
@@ -28,6 +46,8 @@ const clickCircle = (i) => {
     rounds--
     score += 10
 scoreDisplay.textContent = score    
+
+soundhit()
 }
 
 circles.forEach((circle, i) => {
@@ -38,7 +58,9 @@ const enableEvents = () => {
     circles.forEach(circle => {
         circle.style.pointerEvents ="auto"
     })
+
 }
+
 
 
 const startGame = () => {
@@ -92,6 +114,7 @@ function buttonswitch() {
 const EndGame = () => {
     thankscreen()
     clearTimeout(timer)
+    soundover()
 
 }
 
@@ -100,7 +123,13 @@ window.location.reload()
 )
 
 
+
+
 startbutton.addEventListener('click', startGame)
+startbutton.addEventListener('click', soundplay)
 startbutton.addEventListener('click', buttonswitch)
 endbutton.addEventListener('click', EndGame)
 closeButton.addEventListener('click', Xbutton)
+
+document.addEventListener('click',toggleClass);
+

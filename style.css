@@ -48,6 +48,8 @@ body {
     background-size:cover;
     background-color: black;
 
+    
+
 }
 
 h1 {
@@ -78,12 +80,17 @@ h1 {
 }
 
 .circle:hover{
-  border: 8px outset rgb(0, 124, 25)
+  border: 8px outset rgb(0, 124, 25);
+  
 }
 
 .circle.active {
-    background-color: rgb(228, 0, 0);
+
+    background-image: url('f4045fb744caa1fb5ccb1a7fb790ddb7.jpg');
     background-size: cover;
+    background-color: black;
+    cursor: crosshair;
+
 
 }
 
@@ -206,3 +213,6 @@ h1 {
 
 
 }
+
+
+
